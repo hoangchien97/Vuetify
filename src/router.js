@@ -4,6 +4,7 @@ import Router from "vue-router";
 const HomePage = () => import("@/components/HomePage");
 const Contact = () => import("@/components/Contact");
 const User = () => import("@/components/user/_id");
+const ProductDetail = () => import("@/components/ProductDetail");
 Vue.use(Router);
 
 const router = new Router({
@@ -23,6 +24,12 @@ const router = new Router({
       path: "/user/:username",
       name: "profile",
       component: User
+    },
+    {
+      path: "/products/:id",
+      name: "ProductDetail",
+      component: ProductDetail,
+      props: true
     }
   ]
 });

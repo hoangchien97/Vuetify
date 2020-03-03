@@ -47,6 +47,14 @@
             >User Profile</router-link
           >
         </li>
+        <li>
+          <!-- <router-link :to="{ name: 'ProductDetail' }"
+            >Product Detail</router-link
+          > -->
+          <div @click="viewProductDetail" style="cursor :pointer">
+            View Product Detail
+          </div>
+        </li>
       </ul>
 
       <router-view />
@@ -66,6 +74,12 @@ export default {
 
   data: () => ({
     //
-  })
+    id: 9
+  }),
+  methods: {
+    viewProductDetail() {
+      this.$router.push(`/products/${this.id}`);
+    }
+  }
 };
 </script>
