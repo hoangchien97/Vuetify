@@ -34,8 +34,21 @@
     </v-app-bar>
 
     <v-content>
-      <router-link :to="{ name: 'homepage' }">HomePage</router-link>
-      <router-link :to="{ name: 'contact' }">Contact</router-link>
+      <ul>
+        <li>
+          <router-link :to="{ name: 'homepage' }">HomePage</router-link>
+        </li>
+        <li>
+          <router-link :to="{ name: 'contact' }">Contact</router-link>
+        </li>
+        <li>
+          <router-link
+            :to="{ name: 'profile', params: { username: 'hdchien97' } }"
+            >User Profile</router-link
+          >
+        </li>
+      </ul>
+
       <router-view />
     </v-content>
   </v-app>
