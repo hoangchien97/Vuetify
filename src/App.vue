@@ -1,10 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
+    <v-app-bar app color="primary" dark>
       <div class="d-flex align-center">
         <v-img
           alt="Vuetify Logo"
@@ -38,23 +34,52 @@
     </v-app-bar>
 
     <v-content>
-      <HelloWorld/>
+      <ul>
+        <li>
+          <router-link :to="{ name: 'homepage' }">HomePage</router-link>
+        </li>
+        <li>
+          <router-link :to="{ name: 'contact' }">Contact</router-link>
+        </li>
+        <li>
+          <router-link
+            :to="{ name: 'profile', params: { username: 'hdchien97' } }"
+            >User Profile</router-link
+          >
+        </li>
+        <li>
+          <!-- <router-link :to="{ name: 'ProductDetail' }"
+            >Product Detail</router-link
+          > -->
+          <div @click="viewProductDetail" style="cursor :pointer">
+            View Product Detail
+          </div>
+        </li>
+      </ul>
+
+      <router-view />
     </v-content>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+// import HelloWorld from './components/HelloWorld';
 
 export default {
-  name: 'App',
+  name: "App",
 
   components: {
-    HelloWorld,
+    // HelloWorld,
   },
 
   data: () => ({
     //
+    id: 9
   }),
+  methods: {
+    viewProductDetail() {
+      this.$router.push(`/products/${this.id}`);
+    }
+  }
 };
 </script>
