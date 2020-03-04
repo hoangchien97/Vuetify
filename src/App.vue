@@ -48,12 +48,12 @@
           >
         </li>
         <li>
-          <!-- <router-link :to="{ name: 'ProductDetail' }"
-            >Product Detail</router-link
-          > -->
           <div @click="viewProductDetail" style="cursor :pointer">
             View Product Detail
           </div>
+        </li>
+        <li>
+          <router-link :to="{ name: 'ListEmployees' }">List Employees</router-link>
         </li>
       </ul>
 
