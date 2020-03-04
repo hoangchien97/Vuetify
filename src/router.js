@@ -5,6 +5,7 @@ const HomePage = () => import("@/components/HomePage");
 const Contact = () => import("@/components/Contact");
 const User = () => import("@/components/user/_id");
 const ProductDetail = () => import("@/components/ProductDetail");
+const ListEmployees = () => import("@/components/Employees/index");
 Vue.use(Router);
 
 const router = new Router({
@@ -30,6 +31,11 @@ const router = new Router({
       name: "ProductDetail",
       component: ProductDetail,
       props: true
+    },
+    {
+      path: "/employees",
+      name: "ListEmployees",
+      component: ListEmployees
     }
   ]
 });
