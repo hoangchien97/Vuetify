@@ -1,4 +1,5 @@
 import Vue from "vue";
+import i18n from "@/i18n";
 import Vuetify from "vuetify/lib";
 
 Vue.use(Vuetify);
@@ -11,6 +12,9 @@ const theme = {
 };
 
 export default new Vuetify({
+  lang: {
+    t: (key, ...params) => i18n.t(key, params)
+  },
   theme: {
     // dark: false,
     themes: {
