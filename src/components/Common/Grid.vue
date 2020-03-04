@@ -1,15 +1,18 @@
 <template>
   <div>
-    <div>
-      <h1>This is page Contact</h1>
-    </div>
+    <!-- v-row now provides gutter adjustments and has 3 options available -->
+    <!-- v1.5 - <v-container grid-list-xl> to v2.0 - regular (nothing required) -->
+    <!-- v1.5 - <v-container grid-list-md> to v2.0 - <v-row dense> -->
+    <!-- v1.5 - <v-container> to v2.0 - <v-row no-gutters> -->
+
+    <!-- v1.5 -->
     <v-container grid-list-xl>
       <v-layout>
         <v-flex>
-          <v-sheet class="pa-3">v-flex 1</v-sheet>
+          <v-sheet class="pa-3">v-flex</v-sheet>
         </v-flex>
         <v-flex>
-          <v-sheet class="pa-3">v-flex 1</v-sheet>
+          <v-sheet class="pa-3">v-flex</v-sheet>
         </v-flex>
       </v-layout>
     </v-container>
@@ -18,10 +21,10 @@
     <v-container>
       <v-row>
         <v-col>
-          <v-sheet class="pa-3">v-col 2</v-sheet>
+          <v-sheet class="pa-3">v-col</v-sheet>
         </v-col>
         <v-col>
-          <v-sheet class="pa-3">v-col 2</v-sheet>
+          <v-sheet class="pa-3">v-col</v-sheet>
         </v-col>
       </v-row>
     </v-container>
@@ -30,10 +33,10 @@
     <v-container grid-list-md>
       <v-layout>
         <v-flex>
-          <v-sheet class="pa-3">v-flex 3</v-sheet>
+          <v-sheet class="pa-3">v-flex</v-sheet>
         </v-flex>
         <v-flex>
-          <v-sheet class="pa-3">v-flex 3</v-sheet>
+          <v-sheet class="pa-3">v-flex</v-sheet>
         </v-flex>
       </v-layout>
     </v-container>
@@ -68,7 +71,7 @@
     <v-container>
       <v-row no-gutters>
         <v-col>
-          <v-sheet class="pa-3">v-col no guter</v-sheet>
+          <v-sheet class="pa-3">v-col</v-sheet>
         </v-col>
         <v-col>
           <v-sheet class="pa-3">v-col</v-sheet>

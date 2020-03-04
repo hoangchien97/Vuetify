@@ -53,10 +53,18 @@
           </div>
         </li>
         <li>
-          <router-link :to="{ name: 'ListEmployees' }">List Employees</router-link>
+          <router-link :to="{ name: 'ListEmployees' }"
+            >List Employees</router-link
+          >
         </li>
       </ul>
-
+      <div>
+        <li>
+          <router-link :to="{ name: 'Learning' }">Learning Vuetify</router-link>
+        </li>
+        <!-- using i18n -->
+        <p>{{ $vuetify.lang.t("$vuetify.Learning") }}</p>
+      </div>
       <router-view />
     </v-content>
   </v-app>
@@ -64,7 +72,6 @@
 
 <script>
 // import HelloWorld from './components/HelloWorld';
-
 export default {
   name: "App",
 
