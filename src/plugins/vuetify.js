@@ -16,5 +16,17 @@ export default new Vuetify({
       dark: theme,
       light: theme
     }
+  },
+  icons: {
+    iconfont: "mdiSvg", // 'mdi' || 'mdiSvg' || 'md' || 'fa' || 'fa4' || 'faSvg'
+    values: {
+      product: "mdi-dropbox",
+      support: "mdi-lifebuoy",
+      steam: "mdi-steam-box",
+      pc: "mdi-desktop-classic",
+      xbox: "mdi-xbox",
+      playstation: "mdi-playstation",
+      switch: "mdi-nintendo-switch"
+    }
   }
 });
