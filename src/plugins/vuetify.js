@@ -12,6 +12,7 @@ const theme = {
 
 export default new Vuetify({
   theme: {
+    // dark: false,
     themes: {
       dark: theme,
       light: theme
