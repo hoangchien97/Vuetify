@@ -57,14 +57,12 @@
             >List Employees</router-link
           >
         </li>
-      </ul>
-      <div>
         <li>
-          <router-link :to="{ name: 'Learning' }">Learning Vuetify</router-link>
+          <router-link :to="{ name: 'Learning' }">{{
+            $vuetify.lang.t("$vuetify.i18n")
+          }}</router-link>
         </li>
-        <!-- using i18n -->
-        <p>{{ $vuetify.lang.t("$vuetify.Learning") }}</p>
-      </div>
+      </ul>
       <router-view />
     </v-content>
   </v-app>
