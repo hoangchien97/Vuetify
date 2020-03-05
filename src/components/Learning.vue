@@ -1,39 +1,20 @@
 <template>
   <div>
     <h1>Learning Vue</h1>
-    <h2>Slot</h2>
-    <Slot v-slot:[collection]="{ categories }">
-      <ul>
-        <li v-for="category in categories" :key="category">
-          {{ category }}
-        </li>
-      </ul>
-    </Slot>
-    <button class="btn btn-outline-secondary" @click="changeCollection">
-      Change
-    </button>
+    <h2>Breack Point</h2>
+    <BreakPoint></BreakPoint>
   </div>
 </template>
 
 <script>
-import Slot from "./Common/Slot";
+import BreakPoint from "./Common/BreakPoint";
 export default {
   name: "Learning",
-  components: { Slot },
+  components: { BreakPoint },
   data() {
-    return {
-      collection: "default"
-    };
+    return {};
   },
-  methods: {
-    changeCollection() {
-      if (this.collection === "default") {
-        this.collection = "new_categories";
-      } else {
-        this.collection = "default";
-      }
-    }
-  }
+  methods: {}
 };
 </script>
 
