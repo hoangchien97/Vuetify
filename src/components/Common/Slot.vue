@@ -1,16 +1,16 @@
 <template>
-  <div>
-    <slot></slot>
-    <slot name="title"></slot>
-    <slot name="description"></slot>
-    <p>It's a veritable slot machine!</p>
-  </div>
+  <span>
+    <slot :categories="categories"></slot>
+  </span>
 </template>
 
 <script>
 export default {
-  name: "ListComponent"
+  name: "Slot",
+  data() {
+    return {
+      categories: ["Dart", "Flutter", "Vue.js"]
+    };
+  }
 };
 </script>
-
-<style></style>
