@@ -12,6 +12,7 @@ const Color = () => import("@/components/StyleAndAnimation/Color");
 const BlockQuote = () => import("@/components/StyleAndAnimation/BlockQuote");
 const Transition = () => import("@/components/StyleAndAnimation/Transition");
 const TodoList = () => import("@/components/StyleAndAnimation/TodoList");
+const UIComponents = () => import("@/components/UI/index");
 Vue.use(Router);
 
 const router = new Router({
@@ -75,6 +76,11 @@ const router = new Router({
           component: TodoList
         }
       ]
+    },
+    {
+      path: "/ui-components",
+      name: "UIComponents",
+      component: UIComponents
     }
   ]
 });
