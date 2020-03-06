@@ -12,6 +12,10 @@ const Color = () => import("@/components/StyleAndAnimation/Color");
 const BlockQuote = () => import("@/components/StyleAndAnimation/BlockQuote");
 const Transition = () => import("@/components/StyleAndAnimation/Transition");
 const TodoList = () => import("@/components/StyleAndAnimation/TodoList");
+const UIComponents = () => import("@/components/UI/index");
+const VComplete = () => import("@/components/UI/VComplete");
+const VFilter = () => import("@/components/UI/VFilter");
+const PopoverMenu = () => import("@/components/UI/Navigation");
 Vue.use(Router);
 
 const router = new Router({
@@ -73,6 +77,28 @@ const router = new Router({
           path: "/todo-list",
           name: "TodoList",
           component: TodoList
+        }
+      ]
+    },
+    {
+      path: "/ui-components",
+      name: "UIComponents",
+      component: UIComponents,
+      children: [
+        {
+          path: "v-complete",
+          name: "VComplete",
+          component: VComplete
+        },
+        {
+          path: "v-filter",
+          name: "VFilter",
+          component: VFilter
+        },
+        {
+          path: "navigator",
+          name: "Popover Menu",
+          component: PopoverMenu
         }
       ]
     }
