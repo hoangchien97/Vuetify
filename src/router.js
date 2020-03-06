@@ -7,10 +7,15 @@ const User = () => import("@/components/user/_id");
 const ProductDetail = () => import("@/components/ProductDetail");
 const ListEmployees = () => import("@/components/Employees/index");
 const Learning = () => import("@/components/Learning");
+const StyleAndAnimation = () => import("@/components/StyleAndAnimation/index");
+const Color = () => import("@/components/StyleAndAnimation/Color");
+const BlockQuote = () => import("@/components/StyleAndAnimation/BlockQuote");
+const Transition = () => import("@/components/StyleAndAnimation/Transition");
+const TodoList = () => import("@/components/StyleAndAnimation/TodoList");
 Vue.use(Router);
 
 const router = new Router({
-  mode: "hash",
+  mode: "history",
   routes: [
     {
       path: "/homepage",
@@ -42,6 +47,34 @@ const router = new Router({
       path: "/learning",
       name: "Learning",
       component: Learning
+    },
+    {
+      path: "/style-animation",
+      name: "StyleAndAnimation",
+      component: StyleAndAnimation,
+      props: true,
+      children: [
+        {
+          path: "color",
+          name: "Color",
+          component: Color
+        },
+        {
+          path: "blockquote",
+          name: "BlockQuote",
+          component: BlockQuote
+        },
+        {
+          path: "/transition",
+          name: "Transition",
+          component: Transition
+        },
+        {
+          path: "/todo-list",
+          name: "TodoList",
+          component: TodoList
+        }
+      ]
     }
   ]
 });

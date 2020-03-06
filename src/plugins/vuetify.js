@@ -1,6 +1,7 @@
 import Vue from "vue";
 import i18n from "@/i18n";
 import Vuetify from "vuetify/lib";
+import colors from "vuetify/lib/util/colors";
 
 Vue.use(Vuetify);
 
@@ -11,6 +12,12 @@ const theme = {
   info: "#00CAE3"
 };
 
+const darkthemes = {
+  primary: colors.red.darken1, // #E53935
+  secondary: colors.red.lighten4, // #FFCDD2
+  accent: colors.indigo.base // #3F51B5
+};
+
 export default new Vuetify({
   lang: {
     t: (key, ...params) => i18n.t(key, params)
@@ -18,7 +25,7 @@ export default new Vuetify({
   theme: {
     // dark: false,
     themes: {
-      dark: theme,
+      dark: darkthemes,
       light: theme
     }
   },
@@ -31,7 +38,17 @@ export default new Vuetify({
       pc: "mdi-desktop-classic",
       xbox: "mdi-xbox",
       playstation: "mdi-playstation",
-      switch: "mdi-nintendo-switch"
+      switch: "mdi-nintendo-switch",
+      check: "mdi-check"
     }
+  },
+  breakpoint: {
+    thresholds: {
+      xs: 340,
+      sm: 540,
+      md: 800,
+      lg: 1280
+    },
+    scrollBarWidth: 24
   }
 });

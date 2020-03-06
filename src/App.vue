@@ -62,6 +62,11 @@
             $vuetify.lang.t("$vuetify.i18n")
           }}</router-link>
         </li>
+        <li>
+          <router-link :to="{ name: 'StyleAndAnimation' }">
+            StyleAndAnimation
+          </router-link>
+        </li>
       </ul>
       <router-view />
     </v-content>
