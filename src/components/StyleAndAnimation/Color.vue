@@ -5,12 +5,14 @@
 </template>
 
 <script>
-export default {};
+export default {
+  name: "Color"
+};
 </script>
 
 <style lang="scss" scoped>
-@import "~vuetify/src/scss/variable.scss";
+@import "@/assets/style/scss/index.scss";
 .title {
-  color: $color-title;
+  color: $primary;
 }
 </style>

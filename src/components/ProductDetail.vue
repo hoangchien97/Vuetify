@@ -5,6 +5,7 @@
     <p>Size : XL</p>
     <p>Color : Black and White</p>
     <button>Payment</button>
+    <router-view></router-view>
   </div>
 </template>
 

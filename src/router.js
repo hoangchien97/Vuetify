@@ -7,11 +7,12 @@ const User = () => import("@/components/user/_id");
 const ProductDetail = () => import("@/components/ProductDetail");
 const ListEmployees = () => import("@/components/Employees/index");
 const Learning = () => import("@/components/Learning");
-const StyleAndAnimation = () => import("@/components/StyleAndAnimation");
+const StyleAndAnimation = () => import("@/components/StyleAndAnimation/index");
+const Color = () => import("@/components/StyleAndAnimation/Color");
 Vue.use(Router);
 
 const router = new Router({
-  mode: "hash",
+  mode: "history",
   routes: [
     {
       path: "/homepage",
@@ -47,7 +48,15 @@ const router = new Router({
     {
       path: "/style-animation",
       name: "StyleAndAnimation",
-      component: StyleAndAnimation
+      component: StyleAndAnimation,
+      props: true,
+      children: [
+        {
+          path: "color",
+          name: "Color",
+          component: Color
+        }
+      ]
     }
   ]
 });

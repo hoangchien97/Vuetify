@@ -1,6 +1,16 @@
 <template>
   <div>
-    Style And Animation
+    <div>
+      Style And Animation
+      <ul>
+        <li>
+          <router-link :to="{ name: 'Color' }">
+            Color
+          </router-link>
+        </li>
+      </ul>
+    </div>
+    <router-view></router-view>
   </div>
 </template>
 
