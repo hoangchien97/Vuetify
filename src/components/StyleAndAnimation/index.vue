@@ -13,6 +13,11 @@
             BlockQuote
           </router-link>
         </li>
+        <li>
+          <router-link :to="{ name: 'Transition' }">
+            Transition
+          </router-link>
+        </li>
       </ul>
     </div>
     <router-view></router-view>

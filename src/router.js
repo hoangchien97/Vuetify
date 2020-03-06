@@ -10,6 +10,7 @@ const Learning = () => import("@/components/Learning");
 const StyleAndAnimation = () => import("@/components/StyleAndAnimation/index");
 const Color = () => import("@/components/StyleAndAnimation/Color");
 const BlockQuote = () => import("@/components/StyleAndAnimation/BlockQuote");
+const Transition = () => import("@/components/StyleAndAnimation/Transition");
 Vue.use(Router);
 
 const router = new Router({
@@ -61,6 +62,11 @@ const router = new Router({
           path: "blockquote",
           name: "BlockQuote",
           component: BlockQuote
+        },
+        {
+          path: "/transition",
+          name: "Transition",
+          component: Transition
         }
       ]
     }
