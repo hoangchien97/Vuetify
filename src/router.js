@@ -13,6 +13,8 @@ const BlockQuote = () => import("@/components/StyleAndAnimation/BlockQuote");
 const Transition = () => import("@/components/StyleAndAnimation/Transition");
 const TodoList = () => import("@/components/StyleAndAnimation/TodoList");
 const UIComponents = () => import("@/components/UI/index");
+const VComplete = () => import("@/components/UI/VComplete");
+const VFilter = () => import("@/components/UI/VFilter");
 Vue.use(Router);
 
 const router = new Router({
@@ -80,7 +82,19 @@ const router = new Router({
     {
       path: "/ui-components",
       name: "UIComponents",
-      component: UIComponents
+      component: UIComponents,
+      children: [
+        {
+          path: "v-complete",
+          name: "VComplete",
+          component: VComplete
+        },
+        {
+          path: "v-filter",
+          name: "VFilter",
+          component: VFilter
+        }
+      ]
     }
   ]
 });
