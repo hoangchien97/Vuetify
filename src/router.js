@@ -11,6 +11,7 @@ const StyleAndAnimation = () => import("@/components/StyleAndAnimation/index");
 const Color = () => import("@/components/StyleAndAnimation/Color");
 const BlockQuote = () => import("@/components/StyleAndAnimation/BlockQuote");
 const Transition = () => import("@/components/StyleAndAnimation/Transition");
+const TodoList = () => import("@/components/StyleAndAnimation/TodoList");
 Vue.use(Router);
 
 const router = new Router({
@@ -67,6 +68,11 @@ const router = new Router({
           path: "/transition",
           name: "Transition",
           component: Transition
+        },
+        {
+          path: "/todo-list",
+          name: "TodoList",
+          component: TodoList
         }
       ]
     }

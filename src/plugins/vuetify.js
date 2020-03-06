@@ -38,7 +38,8 @@ export default new Vuetify({
       pc: "mdi-desktop-classic",
       xbox: "mdi-xbox",
       playstation: "mdi-playstation",
-      switch: "mdi-nintendo-switch"
+      switch: "mdi-nintendo-switch",
+      check: "mdi-check"
     }
   },
   breakpoint: {

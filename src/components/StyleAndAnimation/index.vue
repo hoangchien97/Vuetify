@@ -18,6 +18,11 @@
             Transition
           </router-link>
         </li>
+        <li>
+          <router-link :to="{ name: 'TodoList' }">
+            TodoList
+          </router-link>
+        </li>
       </ul>
     </div>
     <router-view></router-view>
