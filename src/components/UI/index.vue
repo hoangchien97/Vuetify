@@ -9,6 +9,9 @@
         <li>
           <router-link :to="{ name: 'VFilter' }">VFilter</router-link>
         </li>
+        <li>
+          <router-link :to="{ name: 'Popover Menu' }">Popover Menu</router-link>
+        </li>
       </ul>
     </div>
     <div>

@@ -15,6 +15,7 @@ const TodoList = () => import("@/components/StyleAndAnimation/TodoList");
 const UIComponents = () => import("@/components/UI/index");
 const VComplete = () => import("@/components/UI/VComplete");
 const VFilter = () => import("@/components/UI/VFilter");
+const PopoverMenu = () => import("@/components/UI/Navigation");
 Vue.use(Router);
 
 const router = new Router({
@@ -93,6 +94,11 @@ const router = new Router({
           path: "v-filter",
           name: "VFilter",
           component: VFilter
+        },
+        {
+          path: "navigator",
+          name: "Popover Menu",
+          component: PopoverMenu
         }
       ]
     }
