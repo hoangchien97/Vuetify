@@ -8,6 +8,11 @@
             Color
           </router-link>
         </li>
+        <li>
+          <router-link :to="{ name: 'BlockQuote' }">
+            BlockQuote
+          </router-link>
+        </li>
       </ul>
     </div>
     <router-view></router-view>

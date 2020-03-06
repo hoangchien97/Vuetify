@@ -9,6 +9,7 @@ const ListEmployees = () => import("@/components/Employees/index");
 const Learning = () => import("@/components/Learning");
 const StyleAndAnimation = () => import("@/components/StyleAndAnimation/index");
 const Color = () => import("@/components/StyleAndAnimation/Color");
+const BlockQuote = () => import("@/components/StyleAndAnimation/BlockQuote");
 Vue.use(Router);
 
 const router = new Router({
@@ -55,6 +56,11 @@ const router = new Router({
           path: "color",
           name: "Color",
           component: Color
+        },
+        {
+          path: "blockquote",
+          name: "BlockQuote",
+          component: BlockQuote
         }
       ]
     }
