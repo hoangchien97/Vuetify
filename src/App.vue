@@ -68,8 +68,13 @@
           </router-link>
         </li>
         <li>
+<<<<<<< HEAD
           <router-link :to="{ name: 'UIComponents' }">
             UI Components
+=======
+          <router-link :to="{ name: 'UIComponent' }">
+            UI Component
+>>>>>>> Layout
           </router-link>
         </li>
       </ul>

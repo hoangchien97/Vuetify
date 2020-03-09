@@ -12,10 +12,9 @@ const Color = () => import("@/components/StyleAndAnimation/Color");
 const BlockQuote = () => import("@/components/StyleAndAnimation/BlockQuote");
 const Transition = () => import("@/components/StyleAndAnimation/Transition");
 const TodoList = () => import("@/components/StyleAndAnimation/TodoList");
-const UIComponents = () => import("@/components/UI/index");
-const VComplete = () => import("@/components/UI/VComplete");
-const VFilter = () => import("@/components/UI/VFilter");
-const PopoverMenu = () => import("@/components/UI/Navigation");
+const UIComponent = () => import("@/components/UIComponent/index");
+const CardActions = () => import("@/components/UIComponent/CardActions");
+const Steppers = () => import("@/components/UIComponent/Steppers");
 Vue.use(Router);
 
 const router = new Router({
@@ -81,24 +80,19 @@ const router = new Router({
       ]
     },
     {
-      path: "/ui-components",
-      name: "UIComponents",
-      component: UIComponents,
+      path: "/ui-component",
+      name: "UIComponent",
+      component: UIComponent,
       children: [
         {
-          path: "v-complete",
-          name: "VComplete",
-          component: VComplete
+          path: "card-actions",
+          name: "CardActions",
+          component: CardActions
         },
         {
-          path: "v-filter",
-          name: "VFilter",
-          component: VFilter
-        },
-        {
-          path: "navigator",
-          name: "Popover Menu",
-          component: PopoverMenu
+          path: "steppers",
+          name: "Steppers",
+          component: Steppers
         }
       ]
     }
