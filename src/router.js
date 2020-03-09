@@ -17,6 +17,7 @@ const CardActions = () => import("@/components/UIComponent/CardActions");
 const Steppers = () => import("@/components/UIComponent/Steppers");
 const FormControls = () => import("@/components/Forms/index");
 const VComplete = () => import("@/components/Forms/VComplete");
+const Checkbox = () => import("@/components/Forms/Checkbox");
 Vue.use(Router);
 
 const router = new Router({
@@ -107,6 +108,11 @@ const router = new Router({
           path: "v-complete",
           name: "VComplete",
           component: VComplete
+        },
+        {
+          path: "checkbox",
+          name: "Checkbox",
+          component: Checkbox
         }
       ]
     }
