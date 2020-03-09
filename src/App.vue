@@ -39,42 +39,18 @@
           <router-link :to="{ name: 'homepage' }">HomePage</router-link>
         </li>
         <li>
-          <router-link :to="{ name: 'contact' }">Contact</router-link>
-        </li>
-        <li>
-          <router-link
-            :to="{ name: 'profile', params: { username: 'hdchien97' } }"
-            >User Profile</router-link
-          >
-        </li>
-        <li>
-          <div @click="viewProductDetail" style="cursor :pointer">
-            View Product Detail
-          </div>
-        </li>
-        <li>
-          <router-link :to="{ name: 'ListEmployees' }"
-            >List Employees</router-link
-          >
-        </li>
-        <li>
-          <router-link :to="{ name: 'Learning' }">{{
-            $vuetify.lang.t("$vuetify.i18n")
-          }}</router-link>
-        </li>
-        <li>
           <router-link :to="{ name: 'StyleAndAnimation' }">
             StyleAndAnimation
           </router-link>
         </li>
         <li>
-<<<<<<< HEAD
-          <router-link :to="{ name: 'UIComponents' }">
-            UI Components
-=======
           <router-link :to="{ name: 'UIComponent' }">
             UI Component
->>>>>>> Layout
+          </router-link>
+        </li>
+        <li>
+          <router-link :to="{ name: 'FormControls' }">
+            Form Controls
           </router-link>
         </li>
       </ul>

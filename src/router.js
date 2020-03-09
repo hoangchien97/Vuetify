@@ -15,6 +15,8 @@ const TodoList = () => import("@/components/StyleAndAnimation/TodoList");
 const UIComponent = () => import("@/components/UIComponent/index");
 const CardActions = () => import("@/components/UIComponent/CardActions");
 const Steppers = () => import("@/components/UIComponent/Steppers");
+const FormControls = () => import("@/components/Forms/index");
+const VComplete = () => import("@/components/Forms/VComplete");
 Vue.use(Router);
 
 const router = new Router({
@@ -93,6 +95,18 @@ const router = new Router({
           path: "steppers",
           name: "Steppers",
           component: Steppers
+        }
+      ]
+    },
+    {
+      path: "/form-controls",
+      name: "FormControls",
+      component: FormControls,
+      children: [
+        {
+          path: "v-complete",
+          name: "VComplete",
+          component: VComplete
         }
       ]
     }
