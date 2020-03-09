@@ -14,6 +14,7 @@ const Transition = () => import("@/components/StyleAndAnimation/Transition");
 const TodoList = () => import("@/components/StyleAndAnimation/TodoList");
 const UIComponent = () => import("@/components/UIComponent/index");
 const CardActions = () => import("@/components/UIComponent/CardActions");
+const Steppers = () => import("@/components/UIComponent/Steppers");
 Vue.use(Router);
 
 const router = new Router({
@@ -87,6 +88,11 @@ const router = new Router({
           path: "card-actions",
           name: "CardActions",
           component: CardActions
+        },
+        {
+          path: "steppers",
+          name: "Steppers",
+          component: Steppers
         }
       ]
     }
