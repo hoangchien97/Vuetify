@@ -67,6 +67,11 @@
             StyleAndAnimation
           </router-link>
         </li>
+        <li>
+          <router-link :to="{ name: 'UIComponent' }">
+            UI Component
+          </router-link>
+        </li>
       </ul>
       <router-view />
     </v-content>

@@ -12,6 +12,8 @@ const Color = () => import("@/components/StyleAndAnimation/Color");
 const BlockQuote = () => import("@/components/StyleAndAnimation/BlockQuote");
 const Transition = () => import("@/components/StyleAndAnimation/Transition");
 const TodoList = () => import("@/components/StyleAndAnimation/TodoList");
+const UIComponent = () => import("@/components/UIComponent/index");
+const CardActions = () => import("@/components/UIComponent/CardActions");
 Vue.use(Router);
 
 const router = new Router({
@@ -73,6 +75,18 @@ const router = new Router({
           path: "/todo-list",
           name: "TodoList",
           component: TodoList
+        }
+      ]
+    },
+    {
+      path: "/ui-component",
+      name: "UIComponent",
+      component: UIComponent,
+      children: [
+        {
+          path: "card-actions",
+          name: "CardActions",
+          component: CardActions
         }
       ]
     }
