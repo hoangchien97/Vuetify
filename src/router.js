@@ -20,6 +20,7 @@ const VComplete = () => import("@/components/Forms/VComplete");
 const Checkbox = () => import("@/components/Forms/Checkbox");
 const ComboBox = () => import("@/components/Forms/ComboBox");
 const Form = () => import("@/components/Forms/Form");
+const VeeValidate = () => import("@/components/Forms/FormVeeValidate");
 Vue.use(Router);
 
 const router = new Router({
@@ -125,6 +126,11 @@ const router = new Router({
           path: "form",
           name: "Form",
           component: Form
+        },
+        {
+          path: "form-veevalidate",
+          name: "FormVeeValidate",
+          component: VeeValidate
         }
       ]
     }
