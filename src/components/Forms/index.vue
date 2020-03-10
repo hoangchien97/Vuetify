@@ -9,6 +9,9 @@
         <li>
           <router-link :to="{ name: 'Checkbox' }">Checkbox</router-link>
         </li>
+        <li>
+          <router-link :to="{ name: 'ComboBox' }">ComboBox</router-link>
+        </li>
       </ul>
     </table>
     <router-view></router-view>

@@ -18,6 +18,7 @@ const Steppers = () => import("@/components/UIComponent/Steppers");
 const FormControls = () => import("@/components/Forms/index");
 const VComplete = () => import("@/components/Forms/VComplete");
 const Checkbox = () => import("@/components/Forms/Checkbox");
+const ComboBox = () => import("@/components/Forms/ComboBox");
 Vue.use(Router);
 
 const router = new Router({
@@ -113,6 +114,11 @@ const router = new Router({
           path: "checkbox",
           name: "Checkbox",
           component: Checkbox
+        },
+        {
+          path: "combobox",
+          name: "ComboBox",
+          component: ComboBox
         }
       ]
     }
