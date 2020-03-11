@@ -23,6 +23,9 @@
         <li>
           <router-link :to="{ name: 'Overlay' }">Overlay</router-link>
         </li>
+        <li>
+          <router-link :to="{ name: 'Navigation' }">Navigation</router-link>
+        </li>
       </ul>
     </table>
     <router-view></router-view>

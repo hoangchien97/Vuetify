@@ -22,6 +22,7 @@ const ComboBox = () => import("@/components/Forms/ComboBox");
 const Form = () => import("@/components/Forms/Form");
 const VeeValidate = () => import("@/components/Forms/FormVeeValidate");
 const Overlay = () => import("@/components/Forms/Overlay");
+const Navigation = () => import("@/components/Forms/Navigation");
 Vue.use(Router);
 
 const router = new Router({
@@ -137,6 +138,11 @@ const router = new Router({
           path: "overlay",
           name: "Overlay",
           component: Overlay
+        },
+        {
+          path: "navigation",
+          name: "Navigation",
+          component: Navigation
         }
       ]
     }
