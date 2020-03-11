@@ -3,11 +3,14 @@ import App from "./App.vue";
 import vuetify from "./plugins/vuetify";
 import router from "@/router";
 import store from "@/store";
+import ApiService from "./services/api.service";
 
 import { ValidationObserver, ValidationProvider, extend } from "vee-validate";
 
 import * as rules from "vee-validate/dist/rules";
 import { messages } from "vee-validate/dist/locale/en.json";
+
+Vue.use(ApiService);
 
 Object.keys(rules).forEach(rule => {
   extend(rule, {
