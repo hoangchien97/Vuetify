@@ -27,13 +27,13 @@
                 <v-text-field
                   label="Enter your email"
                   :rules="[rules.required, rules.email]"
-                  v-model="email"
+                  v-model="formData.email"
                   prepend-icon="mdi mdi-email"
                 ></v-text-field>
                 <v-text-field
                   label="Enter your password"
                   :rules="[rules.required, rules.min]"
-                  v-model="password"
+                  v-model="formData.password"
                   type="password"
                   prepend-icon="mdi mdi-account-circle"
                 ></v-text-field>
@@ -62,8 +62,8 @@
 </template>
 
 <script>
-import router from "@/router";
-import store from "@/store";
+// import router from "@/router";
+// import store from "@/store";
 
 export default {
   name: "login",
@@ -75,8 +75,10 @@ export default {
         show: false,
         message: ""
       },
-      email: "",
-      password: "",
+      formData: {
+        email: "",
+        password: ""
+      },
       btnLoadding: false,
       rules: {
         required: value => !!value || "Field is required.",
@@ -89,40 +91,29 @@ export default {
     };
   },
 
-  beforeCreate() {
-    if (store.state.token) {
-      router.push("/");
-    }
-  },
+  // beforeCreate() {
+  //   if (store.state.token) {
+  //     router.push("/");
+  //   }
+  // },
 
   methods: {
-    login() {
+    async login() {
       this.btnLoadding = true;
       console.log(111);
-
-      // this.$http
-      //   .post(this.$api + "/users/loginByApi", {
-      //     email: this.email,
-      //     password: this.password
-      //   })
-      //   .then(res => {
-      //     if (res.data.status == "success") {
-      //       localStorage.setItem("token", res.data.token);
-      //       localStorage.setItem("user", JSON.stringify(res.data.user));
-      //       store.commit("setToken", res.data.token);
-      //       store.commit("setUser", res.data.user);
-      //       this.btnLoadding = false;
-      //       router.go("/");
-      //     } else {
-      //       this.msg.message = res.data.message;
-      //       this.msg.color = "error";
-      //       this.msg.show = true;
-      //       this.btnLoadding = false;
-      //     }
-      //   })
-      //   .catch(e => {
-      //     console.log("System error: ", e);
-      //   });
+      if (this.formData.email && this.formData.password) {
+        // dispatch call actions
+        // actions -
+        //    where call API, handle success/faild
+        //    actions - call mutations.
+        // mutations - call by
+        //    store.commit()
+        // mutations : setState ---
+        //    call state
+        // state
+        //    init
+        await this.$store.dispatch("login", { ...this.formData });
+      }
     }
   }
 };

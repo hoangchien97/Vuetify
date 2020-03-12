@@ -27,14 +27,13 @@ export default {
   },
 
   doPost: function (url, data) {
-
-    const token = localStorage.getItem('access_token');
+    const token = localStorage.getItem('token');
     return this.axios.post(url, data, {
       headers: { 'Authorization': `Basic ${token}` }
     })
   },
   doGet: function (url, data) {
-    const token = localStorage.getItem('access_token');
+    const token = localStorage.getItem('token');
     return this.axios.get(url, {
       headers: { 'Authorization': `Basic ${token}` },
       params: data

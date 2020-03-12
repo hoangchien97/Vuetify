@@ -2,11 +2,17 @@ import Vue from "vue";
 import Router from "vue-router";
 // Lazy loading for component and chunkalize
 const Login = () => import("@/components/Login");
+const Dashboard = () => import("@/components/Dashboard");
 Vue.use(Router);
 
 const router = new Router({
   mode: "history",
   routes: [
+    {
+      path: "/",
+      name: "Dashboard",
+      component: Dashboard
+    },
     {
       path: "/login",
       name: "Login",
