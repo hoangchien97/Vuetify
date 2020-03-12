@@ -91,27 +91,16 @@ export default {
     };
   },
 
-  // beforeCreate() {
-  //   if (store.state.token) {
-  //     router.push("/");
-  //   }
-  // },
+  beforeCreate() {
+    if (this.$store.state.token) {
+      this.$router.push("/");
+    }
+  },
 
   methods: {
     async login() {
       this.btnLoadding = true;
-      console.log(111);
       if (this.formData.email && this.formData.password) {
-        // dispatch call actions
-        // actions -
-        //    where call API, handle success/faild
-        //    actions - call mutations.
-        // mutations - call by
-        //    store.commit()
-        // mutations : setState ---
-        //    call state
-        // state
-        //    init
         await this.$store.dispatch("login", { ...this.formData });
       }
     }

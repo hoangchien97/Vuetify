@@ -3,10 +3,10 @@
     <h1>Dashboard</h1>
     <template v-if="isLogged">
       <div>
-        {{ user.name }}
+        {{ user ? user.name : null }}
       </div>
       <div class="login-box-btn">
-        <v-btn color="success" @click="logout()" :loading="btnLoadding"
+        <v-btn color="success" @click="logout()"
           ><v-icon>mdi-input</v-icon> Logout</v-btn
         >
       </div>
@@ -26,7 +26,7 @@ export default {
   name: "Dashboard",
   data() {
     return {
-      isLogged: this.$store.getters.isLogged,
+      isLogged: this.$store.getters.isLogged
     };
   },
   computed: {
@@ -36,9 +36,7 @@ export default {
   },
   methods: {
     logout() {
-      localStorage.removeItem("token");
-      localStorage.removeItem("user");
-      this.$router.push("/login");
+      this.$store.dispatch("logout");
     }
   }
 };

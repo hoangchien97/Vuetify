@@ -1,5 +1,5 @@
 // https://vuex.vuejs.org/en/mutations.html
-// import router from '@/router';
+import router from '@/router';
 
 export default {
   setToken(state, token) {
@@ -18,6 +18,11 @@ export default {
     state.drawer = payload
   },
   LOGIN_FAILED() {
-    // router.push('/login')
-  }
+    router.push('/login')
+  },
+  LOGOUT_SUCCESS(state) {
+    state.token = '';
+    state.user = null;
+    return router.push('/login');
+  },
 }

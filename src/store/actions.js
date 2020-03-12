@@ -25,4 +25,16 @@ export default {
       console.log("error", error);
     }
   },
+  logout() {
+    try {
+      console.log("logout");
+      localStorage.removeItem("token");
+      localStorage.removeItem("user");
+      store.commit("LOGOUT_SUCCESS")
+
+    } catch (error) {
+      console.log("e", error);
+
+    }
+  }
 }
