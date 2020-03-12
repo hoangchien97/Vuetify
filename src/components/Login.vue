@@ -15,6 +15,8 @@
                 <v-divider class="my-3"></v-divider>
                 <div class="title mb-3">Savvycom time tracker</div>
               </div>
+
+              <!-- Validate by using v-validate instead of rules -->
               <div class="md-layout-item login-form">
                 <v-avatar
                   slot="offset"
@@ -62,19 +64,13 @@
 </template>
 
 <script>
-// import router from "@/router";
-// import store from "@/store";
+import { VALID_LENGTH } from "@/plugins/constants";
 
 export default {
   name: "login",
 
   data() {
     return {
-      msg: {
-        color: "success",
-        show: false,
-        message: ""
-      },
       formData: {
         email: "",
         password: ""
@@ -82,7 +78,7 @@ export default {
       btnLoadding: false,
       rules: {
         required: value => !!value || "Field is required.",
-        min: v => v.length >= 6 || "Min 6 characters",
+        min: v => v.length >= VALID_LENGTH.PASSWORD || "Min 6 characters",
         email: value => {
           const pattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
           return pattern.test(value) || "Invalid e-mail.";
@@ -97,9 +93,14 @@ export default {
     }
   },
 
+  computed: {
+    msg() {
+      return this.$store.state.msg;
+    }
+  },
+
   methods: {
     async login() {
-      this.btnLoadding = true;
       if (this.formData.email && this.formData.password) {
         await this.$store.dispatch("login", { ...this.formData });
       }

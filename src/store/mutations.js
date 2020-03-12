@@ -17,8 +17,10 @@ export default {
   SET_DRAWER(state, payload) {
     state.drawer = payload
   },
-  LOGIN_FAILED() {
-    router.push('/login')
+  LOGIN_FAILED(state, payload) {
+    state.msg.message = payload,
+    state.msg.show = true,
+    state.msg.color = "red"
   },
   LOGOUT_SUCCESS(state) {
     state.token = '';
